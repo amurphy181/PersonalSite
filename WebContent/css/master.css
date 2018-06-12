@@ -2,6 +2,8 @@
   background-color: #be9b7b;
   margin: 5px;
   width: auto;
+  max-width: fit-content;
+  justify-content: center;
 }
 
 body {
