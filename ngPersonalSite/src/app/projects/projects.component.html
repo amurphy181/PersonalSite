@@ -1,6 +1,239 @@
 <!-- links to github projects -->
+<br><br>
+<div class="grid-container">
+  <div class="accordion-body">
+    <mat-accordion class="example-headers-align">
 
-<div>
+      <!-- MAKE CHANGE -->
+      <mat-expansion-panel (opened)="panelOpenState0 = true" (opened)="setStep(0)" (closed)="panelOpenState0 = false" [expanded]="step === 0">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Make Change
+          </mat-panel-title>
+          <mat-panel-description class="mat-description">
+            {{panelOpenState0 ? 'Follow the link to the Make Change repo' : ''}}
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+
+        <div class="container">
+          <div class="row">
+            <p>
+              <a href="https://github.com/amurphy181/MakeChangeProject" target="_blank">Week 1: Make Change</a><br>
+            </p>
+          </div>
+        </div>
+        <mat-action-row>
+          <!-- <button mat-button color="warn" (click)="prevStep()">Previous</button> -->
+          <button mat-button color="primary" (click)="nextStep()">Jets</button>
+        </mat-action-row>
+      </mat-expansion-panel>
+
+      <!-- JETS -->
+      <mat-expansion-panel (opened)="panelOpenState1 = true" (opened)="setStep(1)" (closed)="panelOpenState1 = false" [expanded]="step === 1">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Jets
+          </mat-panel-title>
+          <mat-panel-description class="mat-description">
+            {{panelOpenState1 ? 'Follow the link to the Jets project repo' : ''}}
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+
+        <div class="container">
+          <div class="row">
+            <p>
+              <a href="https://github.com/amurphy181/JetsProject" target="_blank">Week 2: Jets</a><br> </p>
+          </div>
+        </div>
+        <mat-action-row>
+          <button mat-button color="warn" (click)="prevStep()">Make Change</button>
+          <button mat-button color="primary" (click)="nextStep()">Blackjack</button>
+        </mat-action-row>
+      </mat-expansion-panel>
+
+      <!-- BLACKJACK -->
+      <mat-expansion-panel (opened)="panelOpenState2 = true" (opened)="setStep(2)" (closed)="panelOpenState2 = false" [expanded]="step === 2">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Blackjack
+          </mat-panel-title>
+          <mat-panel-description>
+            {{panelOpenState2 ? 'Follow the link to see the code for Blackjack' : ''}}
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+
+        <div class="container">
+          <div class="row">
+            <p>
+              <a href="https://github.com/amurphy181/BlackjackProject" target="_blank">Week 3: Blackjack</a><br>
+            </p>
+          </div>
+        </div>
+        <mat-action-row>
+          <button mat-button color="warn" (click)="prevStep()">Jets</button>
+          <button mat-button color="primary" (click)="nextStep()">Film Query</button>
+        </mat-action-row>
+      </mat-expansion-panel>
+
+      <!-- FILM QUERY PROJECT -->
+      <mat-expansion-panel (opened)="panelOpenState3 = true" (opened)="setStep(3)" (closed)="panelOpenState3 = false" [expanded]="step === 3">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Film Query
+          </mat-panel-title>
+          <mat-panel-description>
+            {{panelOpenState3 ? 'Follow the link to view the first Film Query project' : ''}}
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+
+        <div class="container">
+          <div class="row">
+            <p>
+              <a href="https://github.com/amurphy181/FilmQueryProject" target="_blank">Week 6: Film Query Project</a><br>
+            </p>
+          </div>
+        </div>
+        <mat-action-row>
+          <button mat-button color="warn" (click)="prevStep()">Blackjack</button>
+          <button mat-button color="primary" (click)="nextStep()">Film MVC</button>
+        </mat-action-row>
+      </mat-expansion-panel>
+
+      <!-- FILM MVC -->
+      <mat-expansion-panel (opened)="panelOpenState4 = true" (opened)="setStep(4)" (closed)="panelOpenState4 = false" [expanded]="step === 4">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Film Spring MVC
+          </mat-panel-title>
+          <mat-panel-description>
+            {{panelOpenState4 ? 'Follow the link below to see the first Spring MVC project' : ''}}
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+
+        <div class="container">
+          <div class="row">
+            <p>
+              <a href="https://github.com/amurphy181/SpringMVCFilmCRUD" target="_blank">Week 7: Film Spring MVC</a><br>
+            </p>
+          </div>
+        </div>
+        <mat-action-row>
+          <button mat-button color="warn" (click)="prevStep()">Film Query</button>
+          <button mat-button color="primary" (click)="nextStep()">Film Query CRUD</button>
+        </mat-action-row>
+      </mat-expansion-panel>
+
+      <!-- FILM QUERY PROJECT -->
+      <mat-expansion-panel (opened)="panelOpenState5 = true" (opened)="setStep(5)" (closed)="panelOpenState5 = false" [expanded]="step === 5">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Film CRUD Project
+          </mat-panel-title>
+          <mat-panel-description>
+            {{panelOpenState5 ? 'Follow the link for a full CRUD film application' : ''}}
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+
+        <div class="container">
+          <div class="row">
+            <p>
+              <a href="https://github.com/amurphy181/JPACRUDProject" target="_blank">Week 8: Film Query Project</a><br>
+            </p>
+          </div>
+        </div>
+        <mat-action-row>
+          <button mat-button color="warn" (click)="prevStep()">Film MVC</button>
+          <button mat-button color="primary" (click)="nextStep()">Midterm GitHub</button>
+        </mat-action-row>
+      </mat-expansion-panel>
+
+      <!-- MIDTERM GITHUB -->
+      <mat-expansion-panel (opened)="panelOpenState6 = true" (opened)="setStep(6)" (closed)="panelOpenState6 = false" [expanded]="step === 6">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Who's Playing? GitHub
+          </mat-panel-title>
+          <mat-panel-description>
+            {{panelOpenState6 ? 'Follow the link to the midterm GitHub repo' : ''}}
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+
+        <div class="container">
+          <div class="row">
+            <p>
+              <a href="https://github.com/amurphy181/MidtermDesolateTranquility" target="_blank">Midterm: Who's Playing?
+                GitHub</a><br>
+            </p>
+          </div>
+        </div>
+        <mat-action-row>
+          <button mat-button color="warn" (click)="prevStep()">Film Query CRUD</button>
+          <button mat-button color="primary" (click)="nextStep()">Midterm Full Site</button>
+        </mat-action-row>
+      </mat-expansion-panel>
+
+      <!-- MIDTERM SITE -->
+      <mat-expansion-panel (opened)="panelOpenState7 = true" (opened)="setStep(7)" (closed)="panelOpenState7 = false" [expanded]="step === 7">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Midterm AWS Hosted Site
+          </mat-panel-title>
+          <mat-panel-description>
+            {{panelOpenState7 ? 'Follow the link below to see the midterm in its full glory' : ''}}
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+
+        <div class="container">
+          <div class="row">
+            <p>
+              <a href="http://18.188.17.166:8080/MVCDesolateMidterm/" target="_blank">Midterm: Who's Playing? Proper Site</a><br>
+            </p>
+          </div>
+        </div>
+        <mat-action-row>
+          <button mat-button color="warn" (click)="prevStep()">Midterm GitHub</button>
+          <!-- <button mat-button color="primary" (click)="nextStep()">Next</button> -->
+        </mat-action-row>
+      </mat-expansion-panel>
+
+    </mat-accordion>
+  </div>
+
+  <div class="project-pictures">
+
+    <div *ngIf="!panelOpenState0 && !panelOpenState1 && !panelOpenState2 && !panelOpenState3 && !panelOpenState4 && !panelOpenState5 && !panelOpenState6 && !panelOpenState7">
+      <img src="https://20dqe434dcuq54vwy1wai79h-wpengine.netdna-ssl.com/wp-content/uploads/2017/02/Denver-OutThere-Colorado-1024x465.jpg"style="width:600px;height:auto;">
+    </div>
+    <div *ngIf="panelOpenState0">
+      <img src="https://www.potterybarnkids.com/pkimgs/rk/images/dp/wcm/201825/0234/cash-register-play-money-o.jpg" style="width:600px;height:auto;">
+    </div>
+    <div *ngIf="panelOpenState1">
+      <img src="https://theaviationgeekclub.com/wp-content/uploads/2018/04/SR-71.jpg" style="width:600px;height:auto;">
+    </div>
+    <div *ngIf="panelOpenState2">
+      <img src="https://i.ytimg.com/vi/7vWYHC-WbLE/maxresdefault.jpg" style="width:600px;height:auto;">
+    </div>
+    <div *ngIf="panelOpenState3">
+      <img src="https://goughlui.com/wp-content/uploads/2014/02/DSC_1864.jpg" style="width:600px;height:auto;">
+    </div>
+    <div *ngIf="panelOpenState4">
+      <img src="https://images.static-bluray.com/movies/covers/137947_slip.jpg" style="width:600px;height:auto;">
+    </div>
+    <div *ngIf="panelOpenState5">
+      <img src="https://cdn.pastemagazine.com/www/articles/blcokbustermain.jpg" style="width:600px;height:auto;">
+    </div>
+    <div *ngIf="panelOpenState6">
+      <img src="https://gazettereview.com/wp-content/uploads/2017/11/1-9.jpg" style="width:600px;height:auto;">
+    </div>
+    <div *ngIf="panelOpenState7">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Microsoft-Xbox-One-Console-Set-wKinect.jpg/1200px-Microsoft-Xbox-One-Console-Set-wKinect.jpg" style="width:600px;height:auto;">
+    </div>
+
+  </div>
+
+</div>
+
+<!-- <div>
   <a href="https://github.com/amurphy181/MakeChangeProject" target="_blank">Week 1: Make Change</a><br>
   <a href="https://github.com/amurphy181/JetsProject" target="_blank">Week 2: Jets</a><br>
   <a href="https://github.com/amurphy181/BlackjackProject" target="_blank">Week 3: Blackjack</a><br>
@@ -9,4 +242,4 @@
   <a href="https://github.com/amurphy181/JPACRUDProject" target="_blank">Week 8: Film Query Project</a><br>
   <a href="https://github.com/amurphy181/MidtermDesolateTranquility" target="_blank">Midterm: Who's Playing? GitHub</a><br>
   <a href="http://18.188.17.166:8080/MVCDesolateMidterm/" target="_blank">Midterm: Who's Playing? Proper Site</a><br>
-</div>
+</div> -->

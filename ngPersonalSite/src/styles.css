@@ -1,4 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+
+.nav-link {
+  float: left;
+  margin-bottom: 10px;
+  margin-right: 5px;
+}
 .navbarTemplate {
   background-color: #be9b7b;
   margin: 5px;
@@ -9,7 +15,79 @@
 
 body {
   font-family: Oxygen, Tahoma, sans-serif;
-  background-color: #fff4e6;
+  background-color: #ffffff;
+  color: navy;
+  margin: 3%;
+}
+
+/* grid container for the PROJECTS PAGE */
+.grid-container {
+  display: grid;
+  grid-template-columns: 50% 200px;
+  grid-column-gap: 2%;
+  align-content: center;
+}
+.accordion-body {
+  grid-column: 1;
+}
+
+.project-pictures {
+  grid-column: 2;
+}
+
+/* grid container for PROFESSIONAL SKILLS */
+.grid-container-skills {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  /* grid-template-rows: 20% 20% 20% 20% 20%; */
+  align-content: center;
+  grid-column-gap: 2%;
+}
+
+.skills-column-1 {
+  grid-column: 1;
+}
+
+.skills-column-2 {
+  grid-column: 2;
+}
+
+.skills-column-3 {
+  grid-column: 3;
+}
+
+.skills-column-4 {
+  grid-column: 4;
+}
+
+.skills-column-5 {
+  grid-column: 5;
+}
+
+/* grid container for EDUCATION */
+.grid-container-education {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.education-left-column {
+  grid-column: 1;
+  font-weight: bold;
+}
+
+.education-right-column {
+  grid-column: 2;
+  text-align: right;
+  font-style: italic;
+}
+
+.row {
+  margin-left: 2%;
+  text-align: left;
+}
+
+.mat-description {
+  margin-right: 25%;
   color: navy;
 }
 
@@ -22,16 +100,16 @@ body {
 .flexContainer {
   display: flex;
   flex: auto;
-  padding: 20px;
+  /* padding: 20px; */
 }
 
 h1{
   text-align: center;
 }
 
-
 .headers {
   color: navy;
   text-align: center;
-
 }
+
+

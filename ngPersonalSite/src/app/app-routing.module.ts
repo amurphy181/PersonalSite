@@ -5,7 +5,7 @@ import { ProjectsComponent } from './projects/projects.component';
 import { ResumeComponent } from './resume/resume.component';
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: 'home' },
+  { path: '', pathMatch: 'full', redirectTo: 'aboutMe' },
   { path: 'projects', component: ProjectsComponent },
   { path: 'aboutMe', component: AboutMeComponent },
   { path: 'resume', component: ResumeComponent }

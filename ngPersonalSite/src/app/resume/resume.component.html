@@ -1,3 +1,243 @@
-<p>
-  resume works!
-</p>
+<!-- Put some of the personal information stuff up here -->
+<br><br>
+<div>
+  <mat-accordion>
+    <!-- Professional Skills -->
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Professional Skills
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+
+      <div class="grid-container-skills">
+        <div class="skills-column-1">
+          <p>Java</p>
+          <p>JavaScript</p>
+          <p>TypeScript</p>
+          <p>SQL</p>
+          <p>JPQL</p>
+        </div>
+        <div class="skills-column-2">
+          <p>HTML/CSS</p>
+          <p>Spring MVC, Boot</p>
+          <p>Angular 6</p>
+          <p>JUnit (4/5)</p>
+          <p>REST</p>
+        </div>
+        <div class="skills-column-3">
+          <p>JPA</p>
+          <p>Maven/Gradle</p>
+          <p>Git/GitHub</p>
+          <p>AWS</p>
+          <p>Trello</p>
+        </div>
+        <div class="skills-column-4">
+          <p>MySQL</p>
+          <p>Tomcat</p>
+          <p>Hibernate</p>
+          <p>Agile</p>
+          <p>TDD</p>
+        </div>
+        <div class="skills-column-5">
+          <p>O.O. Design</p>
+          <p>Linux</p>
+          <p>Pair Programming</p>
+          <p>JSON</p>
+        </div>
+      </div>
+    </mat-expansion-panel>
+    <!-- Personal Summary -->
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Personal Summary
+        </mat-panel-title>
+        <mat-panel-description>
+          {{skillsPanelState ? 'Skills Learned at Skill Distillery and Beyond' : ''}}
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+
+      <div>
+        <p> As part of the instruction staff at Skill Distillery, I have the daily privilege of mentoring students on their journeys from coding beginners to experienced full-stack developers! Whether you’re new to programming and want to discuss taking the next step with SD, or are already in the industry and are interested in collaborating on a project or two, I am very much looking forward to our connection.
+
+        </p>
+      </div>
+    </mat-expansion-panel>
+
+    <!-- Experience -->
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Experience
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+
+
+      <!-- Experience accordion inside of the main accordion -->
+
+      <mat-accordion>
+        <!-- Skill Distillery -->
+        <mat-expansion-panel (opened)="skillDistilleryState = true" (closed)="skillDistilleryState = false" (opened)="setStepJobs(0)"
+          [expanded]="stepJobs === 0">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Skill Distillery
+            </mat-panel-title>
+            <mat-panel-description>
+              {{skillDistilleryState ? 'April 2018 - Present' : ''}}
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <em>Teaching Assistant</em> (August 2018 - Present)<br>
+          • Work with students throughout the course to solidify full-stack application concepts.<br>
+          • Act as a resource during evenings and weekends to help the self-guided learning process.<br>
+          • Communicate with instructors regarding the progress different students are making and how to improve their
+          prospects.<br><br>
+          <em>Student</em> (April 2018 - August 2018) <br>
+          • Built full-stack applications using a MySQL database, Spring Boot and MVC, Angular 6 and REST.<br>
+          • Used Agile methodologies, GitHub version control, and TDD with Junit testing.<br>
+          • Presented projects to potential employers in addition to school staff and students.<br>
+          • Earned the Oracle Java SE 8 OCA Certification 5 weeks into the program.
+          <mat-action-row>
+            <!-- <button mat-button color="warn" (click)="prevStepJobs()">Previous</button> -->
+            <button mat-button color="primary" (click)="nextStepJobs()">Osprey Air Works</button>
+          </mat-action-row>
+        </mat-expansion-panel>
+
+        <!-- Osprey Air Works panel -->
+        <mat-expansion-panel (opened)="ospreyAirWorksState = true" (closed)="ospreyAirWorksState = false" (opened)="setStepJobs(1)"
+          [expanded]="stepJobs === 1">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Osprey Air Works, LLC
+            </mat-panel-title>
+            <mat-panel-description>
+              {{ospreyAirWorksState ? 'June 2017 - Present' : ''}}
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <em>Owner, Drone Pilot</em><br>
+          • Provided aerial photography for local realtors’ property listings, then edited the images with Photoshop
+          and distributed
+          images with Dropbox.<br>
+          • Used software to create three-dimensional models from geolocated imagery.<br>
+          • Provided complete coverage of properties using pre-programmed flight paths and GPS-enabled photography.<br>
+          • Created a geographically accurate survey image for overlay of property boundaries.<br>
+          <mat-action-row>
+            <button mat-button color="warn" (click)="prevStepJobs()">Skill Distillery</button>
+            <button mat-button color="primary" (click)="nextStepJobs()">Solomon Energy</button>
+          </mat-action-row>
+        </mat-expansion-panel>
+
+        <!-- Solomon Energy panel -->
+        <mat-expansion-panel (opened)="solomonState = true" (closed)="solomonState = false" (opened)="setStepJobs(2)"
+          [expanded]="stepJobs === 2">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Solomon Energy Advisors
+            </mat-panel-title>
+            <mat-panel-description>
+              {{solomonState ? 'January 2017 - May 2017' : ''}}
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <em>Pricing Analyst, Sales</em><br>
+          • Provided energy market pricing analyses for field sales reps to coordinate third-party supply contracts.<br>
+          • Worked with executive team to streamline and condense legacy databases into an intuitive spreadsheet.<br>
+          • Interviewed potential sales reps and facilitated their entry into company systems.<br>
+          • Structured and improved management and sales by rolling out a company-wide CRM.
+          <mat-action-row>
+            <button mat-button color="warn" (click)="prevStepJobs()">Osprey Air Works</button>
+            <button mat-button color="primary" (click)="nextStepJobs()">Trinity Solar</button>
+          </mat-action-row>
+        </mat-expansion-panel>
+
+        <!-- Trinity Solar panel -->
+        <mat-expansion-panel (opened)="trinitySolarState = true" (closed)="trinitySolarState = false" (opened)="setStepJobs(3)"
+          [expanded]="stepJobs === 3">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Trinity Solar
+            </mat-panel-title>
+            <mat-panel-description>
+              {{trinitySolarState ? 'August 2016 - January 2017' : ''}}
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <em>Outreach Sales Team Lead</em><br>
+          • Trained and determined readiness of new employees for the sales team.<br>
+          • Evaluated sales areas for solar plausibility and arranged canvassing schedules based performance metrics.<br>
+          • Provided maps as needed to further enhance the weekly production of a given area.
+          <mat-action-row>
+            <button mat-button color="primary" (click)="prevStepJobs()">Solomon Energy</button>
+            <button mat-button color="primary" (click)="nextStepJobs()">SolarCity</button>
+          </mat-action-row>
+        </mat-expansion-panel>
+
+        <!-- SolarCity panel -->
+        <mat-expansion-panel (opened)="solarCityState = true" (closed)="solarCityState = false" (opened)="setStepJobs(4)"
+          [expanded]="stepJobs === 4">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              SolarCity
+            </mat-panel-title>
+            <mat-panel-description>
+              {{solarCityState ? 'August 2015 - September 2016' : ''}}
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <em>Field Energy Specialist</em><br>
+          • Consistently exceeded sales quota and landed within the top 10% of Specialists in the region.<br>
+          • Provided a bridge of communication between SolarCity Energy Consultants and end consumers.<br>
+          • Trained new FES hires in methods and best practices and performed ongoing FES assessment.
+          <mat-action-row>
+            <button mat-button color="warn" (click)="prevStepJobs()">Trinity Solar</button>
+            <button mat-button color="primary" (click)="nextStepJobs()">Whitney Properties</button>
+          </mat-action-row>
+        </mat-expansion-panel>
+
+        <!-- Whitney Properties panel -->
+        <mat-expansion-panel (opened)="whitneyPropState = true" (closed)="whitneyPropState = false" (opened)="setStepJobs(5)"
+          [expanded]="stepJobs === 5">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Whitney Properties, LLC
+            </mat-panel-title>
+            <mat-panel-description>
+              {{whitneyPropState ? 'June 2012 - August 2015' : ''}}
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <em>Project Manager</em><br>
+          • Completed work to within 5% of estimated cost and project timeline.<br>
+          • Led research of available properties, evaluated the cost of renovation versus the expected return, then
+          managed the active project from materials through the realtor hand-off.
+          <mat-action-row>
+            <button mat-button color="warn" (click)="prevStepJobs()">SolarCity</button>
+            <!-- <button mat-button color="primary" (click)="nextStepJobs()">SolarCity</button> -->
+          </mat-action-row>
+        </mat-expansion-panel>
+
+      </mat-accordion>
+    </mat-expansion-panel>
+
+    <!-- Education -->
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Educational Background
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <div class="grid-container-education">
+        <div class="education-left-column">
+          Skill Distillery<br>
+          University of Connecticut<br>
+          Oracle Certified Java SE8 Programmer<br>
+          ESRI Certified Desktop Associate
+        </div>
+        <div class="education-right-column">
+          Full-Stack Software Programming Course<br>
+          B.A. in Geography 3.5/4.0 GPA<br>
+          May 2018<br>
+          August 2017
+        </div>
+      </div>
+    </mat-expansion-panel>
+
+  </mat-accordion>
+</div>

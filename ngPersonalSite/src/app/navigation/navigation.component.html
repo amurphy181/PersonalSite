@@ -1,6 +1,14 @@
 
 <div>
-  <button class="nav-link" [routerLink]="['aboutMe']">About Me</button>
-  <button class="nav-link" [routerLink]="['projects']">Projects</button>
-  <button class="nav-link" [routerLink]="['resume']">Resume</button>
+  <button mat-button class="nav-link" [routerLink]="['aboutMe']" >About Me</button>
+  <button mat-button class="nav-link" [routerLink]="['projects']">Projects</button>
+  <button mat-button class="nav-link" [routerLink]="['resume']">Resume</button>
+  <br>
 </div>
+
+<!-- <button mat-button [matMenuTriggerFor]="menu">Navigation</button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item [routerLink]="['aboutMe']">About Me</button>
+  <button mat-menu-item [routerLink]="['projects']">Projects</button>
+  <button mat-menu-item [routerLink]="['resume']">Resume</button>
+</mat-menu> -->
